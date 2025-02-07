@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Better navigation for ÕIS",
-  "description": "Allows opening pages in new tabs",
-  "version": "1.0",
+  "name": "Better navigation for TalTech ÕIS",
+  "description": "Allows opening TalTech ÕIS pages in new tabs",
+  "version": "1.0.0",
   "permissions": [
     "storage",
     "scripting",
