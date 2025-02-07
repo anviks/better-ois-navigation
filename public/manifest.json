@@ -8,22 +8,24 @@
     "scripting",
     "tabs"
   ],
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
   "background": {
     "service_worker": "scripts/background.js"
   },
   "action": {
     "default_icon": {
-      "16": "images/taltech_logo.png",
-      "32": "images/taltech_logo.png",
-      "64": "images/taltech_logo.png",
-      "128": "images/taltech_logo.png"
+      "16": "icons/enabled16.png",
+      "32": "icons/enabled32.png",
+      "48": "icons/enabled48.png",
+      "128": "icons/enabled128.png"
     }
   },
   "icons": {
-    "16": "images/taltech_logo.png",
-    "32": "images/taltech_logo.png",
-    "64": "images/taltech_logo.png",
-    "128": "images/taltech_logo.png"
+    "16": "icons/enabled16.png",
+    "32": "icons/enabled32.png",
+    "48": "icons/enabled48.png",
+    "128": "icons/enabled128.png"
   }
 }
