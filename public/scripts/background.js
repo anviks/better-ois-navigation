@@ -1,15 +1,23 @@
+const isExtensionEnabled = async () => {
+  const data = await chrome.storage.local.get('enabled');
+  return data.enabled;
+}
+
+const setExtensionEnabled = async (enabled) => {
+  await chrome.storage.local.set({ enabled: enabled });
+}
+
 chrome.runtime.onInstalled.addListener(async () => {
-  await chrome.storage.local.set({ enabled: true });
+  await setExtensionEnabled(true);
 });
 
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   if (
     changeInfo.status === 'complete'
     && tab.url
-    && tab.url.match(/https?:\/\/ois2\.taltech\.ee\/uusois\/uus_ois2\.tud_leht(?:#.*)?/)
+    && tab.url.startsWith('https://ois2.taltech.ee/')
   ) {
-    const data = await chrome.storage.local.get('enabled');
-    const isEnabled = data.enabled;
+    const isEnabled = await isExtensionEnabled();
     if (isEnabled) {
       await chrome.scripting.executeScript({
         target: { tabId: tabId },
@@ -20,10 +28,9 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   }
 });
 
-chrome.action.onClicked.addListener(async (tab) => {
-  const data = await chrome.storage.local.get('enabled');
-  const isEnabled = !data.enabled; // Toggle state
-  await chrome.storage.local.set({ enabled: isEnabled });
+chrome.action.onClicked.addListener(async () => {
+  const isEnabled = !(await isExtensionEnabled());
+  await setExtensionEnabled(isEnabled);
 
   if (isEnabled) {
     await chrome.action.setIcon({

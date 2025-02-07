@@ -9,7 +9,7 @@
     "tabs"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "https://ois2.taltech.ee/*"
   ],
   "background": {
     "service_worker": "scripts/background.js"
