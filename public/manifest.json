@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Better navigation for ÕIS",
+  "description": "Allows opening pages in new tabs",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "images/taltech_logo.png",
+      "32": "images/taltech_logo.png",
+      "64": "images/taltech_logo.png",
+      "128": "images/taltech_logo.png"
+    }
+  },
+  "icons": {
+    "16": "images/taltech_logo.png",
+    "32": "images/taltech_logo.png",
+    "64": "images/taltech_logo.png",
+    "128": "images/taltech_logo.png"
+  }
+}
