@@ -38,7 +38,7 @@ and grayed out when it is disabled.
 - **Enabled:** The extension is active and links can be opened in a new tab by right- or middle-clicking them.
 - **Disabled:** The extension is inactive and links will behave as usual.
 
-[![Demo](demo.gif)](demo.mp4)
+[![Demo](demo.gif)](demo.gif)
 
 ## Permissions
 
