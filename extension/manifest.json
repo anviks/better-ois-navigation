@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Better navigation for TalTech and TLÜ ÕIS",
+  "name": "Better ÕIS navigation",
   "description": "Allows opening TalTech and TLÜ ÕIS pages in new tabs",
   "version": "1.0.0",
   "permissions": [
