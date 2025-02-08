@@ -1,7 +1,7 @@
 # Better Navigation for TalTech and TLÜ ÕIS
 
-This Chrome extension enables a better navigation experience on the study information systems (ÕIS)
-of TalTech and TLÜ universities. By default, the links in these systems cannot be opened in a new tab
+This Chrome extension enables a better navigation experience for the study information systems (ÕIS)
+of Tallinn University of Technology (TalTech) and Tallinn University (TLÜ). By default, the links in these systems cannot be opened in a new tab
 because they rely on JavaScript functions in their href attributes.
 This extension makes it possible to open those links in new tabs, improving usability.
 
