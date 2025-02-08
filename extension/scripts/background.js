@@ -1,21 +1,23 @@
 const isExtensionEnabled = async () => {
   const data = await chrome.storage.local.get('enabled');
   return data.enabled;
-}
+};
 
 const setExtensionEnabled = async (enabled) => {
   await chrome.storage.local.set({ enabled: enabled });
-}
+};
 
 chrome.runtime.onInstalled.addListener(async () => {
   await setExtensionEnabled(true);
 });
 
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
+  const allowedDomains = ['https://ois2.taltech.ee/', 'https://ois2.tlu.ee/']
+
   if (
     changeInfo.status === 'complete'
     && tab.url
-    && tab.url.startsWith('https://ois2.taltech.ee/')
+    && (allowedDomains.some((domain) => tab.url.startsWith(domain)))
   ) {
     const isEnabled = await isExtensionEnabled();
     if (isEnabled) {

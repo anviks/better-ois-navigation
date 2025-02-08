@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Better navigation for TalTech ÕIS",
-  "description": "Allows opening TalTech ÕIS pages in new tabs",
+  "name": "Better navigation for TalTech and TLÜ ÕIS",
+  "description": "Allows opening TalTech and TLÜ ÕIS pages in new tabs",
   "version": "1.0.0",
   "permissions": [
     "storage",
@@ -9,7 +9,8 @@
     "tabs"
   ],
   "host_permissions": [
-    "https://ois2.taltech.ee/*"
+    "https://ois2.taltech.ee/*",
+    "https://ois2.tlu.ee/*"
   ],
   "background": {
     "service_worker": "scripts/background.js"
