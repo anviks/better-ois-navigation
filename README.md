@@ -15,7 +15,8 @@ This extension makes it possible to open those links in new tabs, improving usab
 
 ### Chrome Web Store
 
-TBD
+1. Go to the [Chrome Web Store page](https://chromewebstore.google.com/detail/better-%C3%B5is-navigation/eilekaogmoefkccfigeaajlnabemldnj) of the extension.
+2. Click on the `Add to Chrome` button.
 
 ### Manual Installation
 
