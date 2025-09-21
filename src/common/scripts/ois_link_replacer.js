@@ -1,7 +1,7 @@
 (function() {
   function tryNavigation() {
     const menuId = window.location.hash.substring(1);
-    if (menuId) {
+    if (menuId && /^a\d+$/.test(menuId)) {
       window.open_menyy(menuId);
     }
   }
