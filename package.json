@@ -1,14 +1,9 @@
 {
-  "name": "better-ois-navigation",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "build:chrome": "node build.js chrome",
     "build:firefox": "node build.js firefox"
-  },
-  "dependencies": {
-    "chrome-types": "^0.1.293"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.268",
