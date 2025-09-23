@@ -28,5 +28,11 @@
     "32": "icons/enabled32.png",
     "48": "icons/enabled48.png",
     "128": "icons/enabled128.png"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "better-ois-navigation@example.com",
+      "strict_min_version": "109.0"
+    }
   }
 }
