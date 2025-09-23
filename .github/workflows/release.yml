@@ -1,0 +1,57 @@
+name: Build Extension Releases
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Chrome extension
+        run: npm run build:chrome
+      
+      - name: Build Firefox extension
+        run: npm run build:firefox
+      
+      - name: Zip Chrome build
+        run: |
+          cd build
+          zip -r ../better-ois-navigation-chrome.zip chrome
+          cd ..
+
+      - name: Zip Firefox build
+        run: |
+          cd build
+          zip -r ../better-ois-navigation-firefox.zip firefox
+          cd ..
+
+      - name: Extract latest changelog entry (without version header)
+        run: |
+          awk '/^## \[/{if (p) exit; p=1; next} p' CHANGELOG.md > latest_changelog.md
+      
+      - name: Extract version from tag
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_ENV
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            better-ois-navigation-chrome.zip
+            better-ois-navigation-firefox.zip
+          tag_name: ${{ github.ref_name }}
+          name: ${{ env.VERSION }}
+          body_path: "latest_changelog.md"
