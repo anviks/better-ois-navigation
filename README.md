@@ -11,22 +11,39 @@ This extension makes it possible to open those links in new tabs, improving usab
 - **Simple toggle:** The extension can be easily enabled or disabled with a single click on the extension icon (refresh
   needed).
 
+
 ## Installation
 
-### Chrome Web Store
+### Chrome
 
-1. Go to the [Chrome Web Store page](https://chromewebstore.google.com/detail/better-%C3%B5is-navigation/eilekaogmoefkccfigeaajlnabemldnj) of the extension.
-2. Click on the `Add to Chrome` button.
+#### Chrome Web Store
 
-### Manual Installation
+1. Go to the [Chrome Web Store page](https://chromewebstore.google.com/detail/better-ois-navigation/eilekaogmoefkccfigeaajlnabemldnj) of the extension.
+2. Click on the "Add to Chrome" button.
 
-1. Clone this repository or download the source code as a ZIP archive.
-2. Open the Extension Management page by navigating to `chrome://extensions`.
-    - The Extension Management page can also be opened by clicking on the Chrome menu, hovering over `Extensions`, and
-      selecting `Manage Extensions`.
-3. Enable Developer Mode by clicking the toggle switch next to `Developer mode`.
-4. Click the `Load unpacked` button and select the extension directory.
+#### Manual Installation
+
+1. Download the extension's zip file from the [Releases page](https://github.com/anviks/better-ois-navigation/releases) and extract it.
+2. Open the Extension Management page by navigating to [chrome://extensions](chrome://extensions).
+    - The Extension Management page can also be opened by clicking on the Chrome menu, hovering over "Extensions", and selecting "Manage Extensions".
+3. Enable Developer Mode by clicking the switch next to "Developer mode".
+4. Click the "Load unpacked" button and select the extension directory.
 5. The extension should now be installed and visible in the extensions list.
+
+### Firefox
+
+#### Firefox Add-ons
+
+1. Go to the [Firefox Add-ons page](https://addons.mozilla.org/en-US/firefox/addon/better-ois-navigation/) of the extension.
+2. Click on the "Add to Firefox" button.
+
+#### Manual Installation
+
+1. Download the extension's zip file from the [Releases page](https://github.com/anviks/better-ois-navigation/releases).
+2. Open the Debugging page by navigating to [about:debugging#/runtime/this-firefox](about:debugging#/runtime/this-firefox).
+3. Click the "Load Temporary Add-on..." button and select the downloaded zip file (or extract it and select the `manifest.json` file).
+4. The extension should now be installed and visible in the extensions list.
+
 
 ## Usage
 
@@ -41,6 +58,7 @@ and grayed out when it is disabled.
 
 [![Demo](demo.gif)](demo.gif)
 
+
 ## Permissions
 
 This extension requires the following permissions:
@@ -49,9 +67,11 @@ This extension requires the following permissions:
 - **scripting**: Enables the extension to inject scripts into the pages of TalTech and TLÜ ÕIS for link modification.
 - **tabs**: Allows the extension to interact with browser tabs to detect when a page has finished loading.
 
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 ## Contributing
 
