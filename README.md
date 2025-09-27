@@ -1,5 +1,8 @@
 # Better Navigation for TalTech and TLÜ ÕIS
 
+[![Chrome users](https://img.shields.io/chrome-web-store/users/eilekaogmoefkccfigeaajlnabemldnj?label=Chrome%20users)](https://chromewebstore.google.com/detail/better-ois-navigation/eilekaogmoefkccfigeaajlnabemldnj)
+[![Firefox users](https://img.shields.io/amo/users/better-ois-navigation?label=Firefox%20users)](https://addons.mozilla.org/en-US/firefox/addon/better-ois-navigation/)
+
 This extension enables a better navigation experience for the study information systems (ÕIS)
 of Tallinn University of Technology (TalTech) and Tallinn University (TLÜ). By default, the links in these systems cannot be opened in a new tab
 because they rely on JavaScript functions in their href attributes.
